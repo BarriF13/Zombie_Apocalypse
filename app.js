@@ -6,9 +6,12 @@ function randNum(range) {
 alert(beginningSenario[randNum(beginningSenario.length -1)]);
 
 
-// var weapon = prompt("You search around frantically for a weapon. What do you choose? A bow and arrow, an axe , or a rubber chicken?");
+ var weaponList = ["shovel" , "toothbrush","axe", "crossbow","Rubber chicken"];
 
-// var rand = Math.round(Math.random());
+ var weapon = weaponList[ randNum(weaponList.length -1)];
+ alert("Being that it is the zombie apocalypse, you decide to search for a weapon first. After surveying your surroundings you notice and grab a " + weapon+ ".")
+
+
 
 // alert("You attack the zombie with your " + weapon);
 
