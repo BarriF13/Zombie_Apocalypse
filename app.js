@@ -20,7 +20,7 @@ var character = {
   strenght: 0,
   stealth: 0,
   name: window.prompt("What is your name?"),
-  characterClass: window.prompt("These times test the strenghts of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)").toLowerCase()
+  characterClass: window.prompt("These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)").toLowerCase()
 
 };
 
@@ -51,7 +51,7 @@ if (choice === "attack") {
     character.strenght++;
   } else if (character.strenght <= 5) {
     window.alert("You fearlessly charge zombie with all your strenght. Using your mighty powers you crush thy foe as if it were a sheet of paper you needed to shred.");
-    window.alert("Just kidding. you are immediately bitten by the zombie and die. But not all is lost -- if time spent together makes one friends, then you and the zombie become best friends, and live together for ever. The end. yohohahahaha");
+    window.alert("Just kidding. you are immediately bitten by the zombie and die. But not all is lost -- if time spent together makes one friends, then you and the zombie become best friends, and live together for ever. The end. yoho hahahaha");
     outcome = "lose";
   }
 }
