@@ -1,4 +1,33 @@
-.body{
+body{
   background-color: rgba(82, 21, 33, 0.993);
+  font-family: 'Creepster', cursive;
 
 }
+h1{
+  font-size: 74px;
+text-align: center;
+}
+.butt{
+  font-family: 'Creepster', cursive;
+  font-size: 46px;
+  background-color: rgba(102, 24, 39, 0.993);
+  display: block;
+  margin: auto;
+ border: 3px solid rgb(0, 0, 0) ;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ border-radius: 20px;
+ padding: 20px;
+ cursor: pointer;
+}
+.butt:hover{
+  color:  rgba(102, 24, 39, 0.993);
+  background-color: rgb(0, 0, 0);
+}
+
+
+.container {
+max-width: 60%;
+margin: auto;
+
+padding: 10px
+} 

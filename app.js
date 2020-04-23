@@ -1,9 +1,12 @@
+
+function playGame(){
+  window.alert("one day you wake up and the world as you know has ended. The dead come to life and pray on the living. There is no hope, no cure, only survuval. Welcome to the zombie apocalypse.");
+
 var outcome;
 
-window.alert("one day you wake up and the world as you know has ended. The dead come to life and pray on the living. There is no hope, no cure, only survuval. Welcome to the zombie apocalypse.");
+
 
 var beginningSenario = [" You wake up in a hospital. It is quiet. You tiptoe to the door and peek out.", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here.", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods."];
-
 function randNum(range) {
   "use strict";
   if (typeof range === "number") {
@@ -87,3 +90,4 @@ if (survival === 0) {
   alert("You kill the zombie with your " + weapon + ". You win!!!")
  }
  */
+}
