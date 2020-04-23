@@ -1,6 +1,6 @@
 
 function playGame(){
-  window.alert("one day you wake up and the world as you know has ended. The dead come to life and pray on the living. There is no hope, no cure, only survuval. Welcome to the zombie apocalypse.");
+  window.alert("one day you wake up and the world as you know has ended. The dead come to life and pray on the living. There is no hope, no cure, only survival. Welcome to the zombie apocalypse.");
 
 var outcome;
 
@@ -42,7 +42,7 @@ if (character.characterClass === "artist") {
   character.stealth = 5;
 }
 
-var choice = window.prompt("The breave adventurer and former " + character.characterClass + " " + character.name + "enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?").toLowerCase();
+var choice = window.prompt("The brave adventurer and former " + character.characterClass + " " + character.name + "enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?").toLowerCase();
 
 if (choice === "attack") {
   if (character.strenght === 5) {
@@ -51,7 +51,7 @@ if (choice === "attack") {
     character.strenght++;
   } else if (character.strenght <= 5) {
     window.alert("You fearlessly charge zombie with all your strenght. Using your mighty powers you crush thy foe as if it were a sheet of paper you needed to shred.");
-    window.alert("Just kidding. you are immediately bitten by the zombie and die. But not all is lost -- if time spent together makes one friends, then you and the zombie become best friends, and live together for ever. The end. yoho hahahaha");
+    window.alert("Just kidding. you are immediately bitten by the zombie and die. But not all is lost -- if time spent together makes one friends, then you and the zombie become best friends, and live together for ever. The end.YOHO  HAHAHAHA...");
     outcome = "lose";
   }
 }
