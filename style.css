@@ -73,3 +73,9 @@ padding: 10px
   text-align: center;
   align-items: center;
 }
+#charMsg{
+  font-size:36px;
+  color: rgb(107, 110, 110);
+  text-align: center;
+
+}

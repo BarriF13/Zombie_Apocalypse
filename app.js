@@ -41,42 +41,54 @@ const startButton = document.getElementById("start");
     setTimeout( function(){
       document.getElementById('userName').style.display = 'block';
       document.getElementById('name').style.display = 'block';
-    },2000);
+    },1000);
   
   })
 
 
 document.getElementById('userName').addEventListener('click', function(){
+  document.getElementById('charMsg').textContent =
+  "These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)";
+  
   var charName = document.getElementById('name').value;
+  var userCharacter = document.getElementById('character').value;
+
+  var character = {
+    health: 5,
+    strength: 0,
+    stealth: 0,
+    name:  charName,
+   charClass: userCharacter
+  };
+  console.dir(character.name);
+ 
+  document.getElementById('secondMsg').style.display = 'none';
   document.getElementById('name').style.display = 'none';
   document.getElementById('userName').style.display = 'none';
 
   document.getElementById('userCharacter').style.display = 'block';
   document.getElementById('character').style.display = 'block';
-  console.log(charName);
-})
 
-
-document.getElementById('userCharacter').addEventListener('click', function(){
+  document.getElementById('userCharacter').addEventListener('click', function(){
   
-  var userCharacter = document.getElementById('character').value;
-  console.log(userCharacter);
-
-  
+    var userCharacter = document.getElementById('character').value;
+     character['charClass']= userCharacter;
+    console.log(character.charClass);
+    
+  })
 })
-
 
 var outcome;
-var character = {
-  health: 5,
-  strength: 0,
-  stealth: 0,
+// var character = {
+//   health: 5,
+//   strength: 0,
+//   stealth: 0,
   // name:  charName
-  // characterClass: document.write("These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)").toLowerCase()
+  // charClass: document.write("These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)").toLowerCase()
  
-};
+// };
 
-  console.log(character.name);
+  // console.dir(character);
 // if (!character.name) {
 //   character.name = document.write("I don't know what to call you if you don't enter a name. if you don't answer I name you myself hahaha....., what is your name???");
 //   if (!character.name) {
@@ -85,17 +97,17 @@ var character = {
 //   }
 // }
 
-// if (character.characterClass === "soldier") {
+// if (character.charClass === "soldier") {
 //   character.strength = 5;
 // }
-// if (character.characterClass === "doctor") {
+// if (character.charClass === "doctor") {
 //   character.health = 7;
 // }
-// if (character.characterClass === "artist") {
+// if (character.charClass === "artist") {
 //   character.stealth = 5;
 // }
 
-// var choice = document.write("The brave adventurer and former " + character.characterClass + " " + character.name + "enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?").toLowerCase();
+// var choice = document.write("The brave adventurer and former " + character.charClass + " " + character.name + "enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?").toLowerCase();
 
 // if (choice === "attack") {
 //   if (character.strength === 5) {
