@@ -13,11 +13,13 @@ const startButton = document.getElementById("start");
       }
       document.getElementById('userName').style.display = 'none';
       document.getElementById('name').style.display = 'none';
+
+      document.getElementById('userCharacter').style.display = 'none';
+      document.getElementById('character').style.display =  'none';
 });
 
 //--going to stage two of the game
-const gameStart = document.getElementById("gameStart");
-  gameStart.addEventListener('click', function (){
+ document.getElementById("gameStart").addEventListener('click', function (){
     var beginningScenario = [" You wake up in a hospital. It is quiet. You tiptoe to the door and peek out.", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here.", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods."];
     function randNum(range) {
       "use strict";
@@ -46,7 +48,21 @@ const gameStart = document.getElementById("gameStart");
 
 document.getElementById('userName').addEventListener('click', function(){
   var charName = document.getElementById('name').value;
+  document.getElementById('name').style.display = 'none';
+  document.getElementById('userName').style.display = 'none';
+
+  document.getElementById('userCharacter').style.display = 'block';
+  document.getElementById('character').style.display = 'block';
   console.log(charName);
+})
+
+
+document.getElementById('userCharacter').addEventListener('click', function(){
+  
+  var userCharacter = document.getElementById('character').value;
+  console.log(userCharacter);
+
+  
 })
 
 
@@ -55,7 +71,7 @@ var character = {
   health: 5,
   strength: 0,
   stealth: 0,
-  // name: charName
+  // name:  charName
   // characterClass: document.write("These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)").toLowerCase()
  
 };

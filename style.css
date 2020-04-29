@@ -67,3 +67,9 @@ padding: 10px
   text-align: center;
   align-items: center;
 }
+#character{
+  font-size: 30px;
+  margin: 10px auto;
+  text-align: center;
+  align-items: center;
+}
