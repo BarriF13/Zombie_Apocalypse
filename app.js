@@ -11,12 +11,13 @@ const startButton = document.getElementById("start");
         openingMessage.classList.add('d-none');
         startButton.textContent= 'Too scared?! , you are back to the beginning';
       }
-      document.getElementById('stageThree').style.display = 'none';
+      document.getElementById('userName').style.display = 'none';
+      document.getElementById('name').style.display = 'none';
 });
 
 //--going to stage two of the game
-const stageTwo = document.getElementById("stageTwo");
-  stageTwo.addEventListener('click', function (){
+const gameStart = document.getElementById("gameStart");
+  gameStart.addEventListener('click', function (){
     var beginningScenario = [" You wake up in a hospital. It is quiet. You tiptoe to the door and peek out.", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here.", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods."];
     function randNum(range) {
       "use strict";
@@ -26,32 +27,40 @@ const stageTwo = document.getElementById("stageTwo");
     }
     //I need to print this in a specific html add
    document.getElementById('secondMsg').textContent =(beginningScenario[randNum(beginningScenario.length - 1)]);
-   document.getElementById('stageTwo').style.display = 'none';
-   document.getElementById('stageThree').style.display = 'block';
+   
+   document.getElementById('intro').style.display = 'none';
+   document.getElementById('gameStart').style.display = 'none';
+  //  document.getElementById('userName').style.display = 'block';
+  //  document.getElementById('name').style.display = 'block';
+  })
+
+  document.getElementById('gameStart').addEventListener('click' , function(){
+
+    setTimeout( function(){
+      document.getElementById('userName').style.display = 'block';
+      document.getElementById('name').style.display = 'block';
+    },2000);
+  
   })
 
 
+document.getElementById('userName').addEventListener('click', function(){
+  var charName = document.getElementById('name').value;
+  console.log(charName);
+})
 
- var outcome;
 
-// var beginningScenario = [" You wake up in a hospital. It is quiet. You tiptoe to the door and peek out.", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here.", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods."];
-// function randNum(range) {
-//   "use strict";
-//   if (typeof range === "number") {
-//     return Math.round(Math.random() * range);
-//   }
-// }
-// randNumF = document.write(beginningScenario[randNum(beginningScenario.length - 1)]);
-
+var outcome;
 var character = {
   health: 5,
   strength: 0,
   stealth: 0,
-  name:  document.getElementById('name').textContent =("What is your name?"),
+  // name: charName
   // characterClass: document.write("These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)").toLowerCase()
-
+ 
 };
 
+  console.log(character.name);
 // if (!character.name) {
 //   character.name = document.write("I don't know what to call you if you don't enter a name. if you don't answer I name you myself hahaha....., what is your name???");
 //   if (!character.name) {
