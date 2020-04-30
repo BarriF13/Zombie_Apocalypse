@@ -32,13 +32,10 @@ document.getElementById("gameStart").addEventListener('click', function () {
       return Math.round(Math.random() * range);
     }
   }
-  //I need to print this in a specific html add
-  document.getElementById('secondMsg').textContent = (beginningScenario[randNum(beginningScenario.length - 1)]);
 
+  document.getElementById('secondMsg').textContent = (beginningScenario[randNum(beginningScenario.length - 1)]);
   document.getElementById('intro').style.display = 'none';
   document.getElementById('gameStart').style.display = 'none';
-  //  document.getElementById('userName').style.display = 'block';
-  //  document.getElementById('name').style.display = 'block';
 })
 
 document.getElementById('gameStart').addEventListener('click', function () {
@@ -49,20 +46,12 @@ document.getElementById('gameStart').addEventListener('click', function () {
   }, 1000);
 
 })
-var character = {
-  health: 5,
-  strength: 0,
-  stealth: 0,
-  name: charName,
-  charClass: userCharacter
-};
 
 document.getElementById('userName').addEventListener('click', function () {
-  document.getElementById('charMsg').textContent =
-    "These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)";
+  document.getElementById('charMsg').textContent = "These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)";
 
   var charName = document.getElementById('name').value;
-
+  character['name'] = charName;
   if (!character.name) {
     character.name = " Gunther Piddles ";
   }
@@ -84,53 +73,43 @@ document.getElementById('userName').addEventListener('click', function () {
 
     var userCharacter = document.getElementById('character').value.toLowerCase();
     character['charClass'] = userCharacter;
-    if (character.charClass === "soldier") {
-          character.strength = 5;
-      console.log(character.strength = 5);
-    }
-    if (character.charClass === "doctor") {
-          character.health = 7;
-      console.log(character.health = 7);
-    }
-    if (character.charClass === "artist") {
-         character.stealth = 5;
-      console.log(character.stealth = 5);
-    }
+
 
     document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + character.name + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
 
   })
 
-  document.getElementById('userChoice').addEventListener('click', function () {
 
+  document.getElementById('userChoice').addEventListener('click', function zert () {
     var choice = document.getElementById('uChoice').value.toLowerCase();
     console.log(choice);
+
+    
+  })
+    if (character.charClass === "soldier") {
+      character.strength = 5;
+    }
+    if (character.charClass === "doctor") {
+      character.health = 7;
+    }
+    if (character.charClass === "artist") {
+      character.stealth = 5;
+    }
+    console.log(character.strength);
+    console.log(character.health);
+    console.log(character.stealth);
+    console.log(character.charClass);
+
     if (choice === "attack") {
       if (character.strength === 5) {
-      document.getElementById('charMsg').textContent = "Using only your bear hands, you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and three can of Beanie Weenies.";
-      outcome = "win";
-      character.strength++;
-      console.log('am I empty'+ character.strength++)
+        document.getElementById('charMsg').textContent = ("you are killing the zombie");
       }
     }
-
-  });
-
-})
-// if (choice === "attack") {
-//   if (character.strength === 5) {
-//     document.getElementById('charMsg').textContent ="Using only your bear hands, you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and three can of Beanie Weenies.";
-    // outcome = "win";
-    // character.strength++;
-//   }
-// }
-// if (character.charClass === "soldier") {
-//   character.strength = 5;
-// }
-// if (character.charClass === "doctor") {
-//   character.health = 7;
-// }
-// if (character.charClass === "artist") {
-//   character.stealth = 5;
-// }
-
+    var character = {
+      health: 5,
+      strength: 0,
+      stealth: 0,
+      name: {},
+      charClass: userCharacter,
+    };
+});
