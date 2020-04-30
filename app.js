@@ -86,12 +86,7 @@ document.getElementById('userName').addEventListener('click', function () {
 
     
   })
-    if (character.charClass === "soldier") {
-      character.strength = 5;
-    }
-    if (character.charClass === "doctor") {
-      character.health = 7;
-    }
+    if (character.charClass === "soldier") {git 
     if (character.charClass === "artist") {
       character.stealth = 5;
     }
