@@ -79,3 +79,9 @@ padding: 10px
   text-align: center;
 
 }
+#uChoice{
+  font-size: 30px;
+  margin: 10px auto;
+  text-align: center;
+  align-items: center;
+}
