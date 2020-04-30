@@ -49,22 +49,19 @@ document.getElementById('gameStart').addEventListener('click', function () {
   }, 1000);
 
 })
-
+var character = {
+  health: 5,
+  strength: 0,
+  stealth: 0,
+  name: charName,
+  charClass: userCharacter
+};
 
 document.getElementById('userName').addEventListener('click', function () {
   document.getElementById('charMsg').textContent =
     "These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)";
 
   var charName = document.getElementById('name').value;
-
-
-  var character = {
-    health: 5,
-    strength: 0,
-    stealth: 0,
-    name: charName,
-    charClass: userCharacter
-  };
 
   if (!character.name) {
     character.name = " Gunther Piddles ";
