@@ -88,7 +88,7 @@ const addCharacter = (ev) => {
 
   document.getElementById('userChoice').style.display = 'block';
   document.getElementById('uChoice').style.display = 'block';
-  document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " +playerName.pName + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
+  document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + playerName.pName + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
   console.log(character.charClass);
   // powerUp();
 }
@@ -104,49 +104,36 @@ const addChoice = (ev) => {
   }
   console.log(choice.playerChoice);
   //run a function here --
-  // game();
-
+  game();
   }
   document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('userChoice').addEventListener('click', addChoice);
   });
 
+  function game(){
+    if (character.charClass === 'debugger') {
+      if (choice.playerChoice === 'attack') {
+        document.getElementById('charMsg').textContent = "Using only your bear hands " + playerName.pName +", you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and five can of Diet cokes.";
+        outcome ='win';
+        character.strength++;
+      }
+    }
+  }
+  function powerUp (){
+    if (character.charClass === "soldier") {
+    character.strength = 5;
+  }
+  if (character.charClass === "doctor") {
+    character.health = 7;
+  }
+  if (character.charClass === "artist") {
+    character.stealth = 5;
+  }
+  if (character.charClass === "debugger"){
+    character.stealth = 7;
+    character.strength = 5;
+  }
+  
+  }
 
-
-  //   document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + character.name + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
-
-  // })
-
-  // document.getElementById('userChoice').addEventListener('click', function () {
-
-  //   var choice = document.getElementById('uChoice').value.toLowerCase();
-  //   console.log(choice);
-  //   if (choice === "attack") {
-  //     if (character.strength === 5) {
-  //     document.getElementById('charMsg').textContent = "Using only your bear hands, you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and three can of Beanie Weenies.";
-  //     outcome = "win";
-  //     character.strength++;
-  //     console.log('am I empty'+ character.strength++)
-  //     }
-  //   }
-
-  // });
-
-// })
-// if (choice === "attack") {
-//   if (character.strength === 5) {
-//     document.getElementById('charMsg').textContent ="Using only your bear hands, you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and three can of Beanie Weenies.";
-    // outcome = "win";
-    // character.strength++;
-//   }
-// }
-// if (character.charClass === "soldier") {
-//   character.strength = 5;
-// }
-// if (character.charClass === "doctor") {
-//   character.health = 7;
-// }
-// if (character.charClass === "artist") {
-//   character.stealth = 5;
-// }
 
