@@ -2,6 +2,9 @@
 
 //--- start of the game
 var outcome;
+var playerName = {};
+var character = {};
+var choice = {};
 
 const startButton = document.getElementById("start");
 startButton.addEventListener('click', function () {
@@ -49,77 +52,87 @@ document.getElementById('gameStart').addEventListener('click', function () {
   }, 1000);
 
 })
-
-
-document.getElementById('userName').addEventListener('click', function () {
-  document.getElementById('charMsg').textContent =
-    "These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, or artist)";
-
-  var charName = document.getElementById('name').value;
-
-
-  var character = {
-    health: 5,
-    strength: 0,
-    stealth: 0,
-    name: charName,
-    charClass: userCharacter
-  };
-
-  if (!character.name) {
-    character.name = " Gunther Piddles ";
+const addName = (ev) => {
+  ev.preventDefault(); //to stop the form submitting 
+  playerName = {
+    pName: document.getElementById('name').value.toLowerCase()
   }
-
+  if (!playerName.pName) {
+    playerName.pName = " Alice of Resident Evil ";
+  }
+  document.getElementById('charMsg').textContent =
+    "These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, artist or debugger)";
   document.getElementById('secondMsg').style.display = 'none';
   document.getElementById('name').style.display = 'none';
   document.getElementById('userName').style.display = 'none';
 
   document.getElementById('userCharacter').style.display = 'block';
   document.getElementById('character').style.display = 'block';
+  console.log(playerName.pName);
+}
 
-  document.getElementById('userCharacter').addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('userName').addEventListener('click', addName);
+});
 
-    document.getElementById('userCharacter').style.display = 'none';
-    document.getElementById('character').style.display = 'none';
+const addCharacter = (ev) => {
+  ev.preventDefault(); //to stop the form submitting 
+  character = {
+    health: 5,
+    strength: 0,
+    stealth: 0,
+    charClass: document.getElementById('character').value.toLowerCase()
+  }
+  document.getElementById('userCharacter').style.display = 'none';
+  document.getElementById('character').style.display = 'none';
 
-    document.getElementById('userChoice').style.display = 'block';
-    document.getElementById('uChoice').style.display = 'block';
+  document.getElementById('userChoice').style.display = 'block';
+  document.getElementById('uChoice').style.display = 'block';
+  console.log(character.charClass);
+  // powerUp();
+}
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('userCharacter').addEventListener('click', addCharacter);
+});
 
-    var userCharacter = document.getElementById('character').value.toLowerCase();
-    character['charClass'] = userCharacter;
-    if (character.charClass === "soldier") {
-          character.strength = 5;
-      console.log(character.strength = 5);
-    }
-    if (character.charClass === "doctor") {
-          character.health = 7;
-      console.log(character.health = 7);
-    }
-    if (character.charClass === "artist") {
-         character.stealth = 5;
-      console.log(character.stealth = 5);
-    }
 
-    document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + character.name + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
+  
 
-  })
+  //   var userCharacter = document.getElementById('character').value.toLowerCase();
+  //   character['charClass'] = userCharacter;
+  //   if (character.charClass === "soldier") {
+  //         character.strength = 5;
+  //     console.log(character.strength = 5);
+  //   }
+  //   if (character.charClass === "doctor") {
+  //         character.health = 7;
+  //     console.log(character.health = 7);
+  //   }
+  //   if (character.charClass === "artist") {
+  //        character.stealth = 5;
+  //     console.log(character.stealth = 5);
+  //   }
 
-  document.getElementById('userChoice').addEventListener('click', function () {
+  //   document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + character.name + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
 
-    var choice = document.getElementById('uChoice').value.toLowerCase();
-    console.log(choice);
-    if (choice === "attack") {
-      if (character.strength === 5) {
-      document.getElementById('charMsg').textContent = "Using only your bear hands, you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and three can of Beanie Weenies.";
-      outcome = "win";
-      character.strength++;
-      console.log('am I empty'+ character.strength++)
-      }
-    }
+  // })
 
-  });
+  // document.getElementById('userChoice').addEventListener('click', function () {
 
-})
+  //   var choice = document.getElementById('uChoice').value.toLowerCase();
+  //   console.log(choice);
+  //   if (choice === "attack") {
+  //     if (character.strength === 5) {
+  //     document.getElementById('charMsg').textContent = "Using only your bear hands, you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and three can of Beanie Weenies.";
+  //     outcome = "win";
+  //     character.strength++;
+  //     console.log('am I empty'+ character.strength++)
+  //     }
+  //   }
+
+  // });
+
+// })
 // if (choice === "attack") {
 //   if (character.strength === 5) {
 //     document.getElementById('charMsg').textContent ="Using only your bear hands, you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and three can of Beanie Weenies.";
