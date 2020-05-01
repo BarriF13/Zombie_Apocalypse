@@ -1,22 +1,9 @@
-// function showMessage(message) {
-//   document.getElementById('message').textContent = message;
-// }
 
 
 
 
 
-// if (choice === "attack") {
-//   if (character.strength === 5) {
-//     document.write("Using only your bear hands, you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and three can of Beanie Weenies.");
-//     outcome = "win";
-//     character.strength++;
-//   } else if (character.strength <= 5) {
-//     document.write("You fearlessly charge zombie with all your strength. Using your mighty powers you crush thy foe as if it were a sheet of paper you needed to shred.");
-//     document.write("Just kidding. you are immediately bitten by the zombie and die. But not all is lost -- if time spent together makes one friends, then you and the zombie become best friends, and live together for ever. The end.YOHO  HAHAHAHA...");
-//     outcome = "lose";
-//   }
-// }
+
 // if (choice === "sneak" || choice === "sneak by the zombie") {
 //   if (character.stealth === 5) {
 //     document.write("You sneak by the zombie, you clever bastard.")
