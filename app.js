@@ -88,6 +88,7 @@ const addCharacter = (ev) => {
 
   document.getElementById('userChoice').style.display = 'block';
   document.getElementById('uChoice').style.display = 'block';
+  document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " +playerName.pName + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
   console.log(character.charClass);
   // powerUp();
 }
@@ -96,22 +97,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-  
+const addChoice = (ev) => {
+  ev.preventDefault();
+  choice = {
+    playerChoice: document.getElementById('uChoice').value.toLowerCase()
+  }
+  console.log(choice.playerChoice);
+  //run a function here --
+  // game();
 
-  //   var userCharacter = document.getElementById('character').value.toLowerCase();
-  //   character['charClass'] = userCharacter;
-  //   if (character.charClass === "soldier") {
-  //         character.strength = 5;
-  //     console.log(character.strength = 5);
-  //   }
-  //   if (character.charClass === "doctor") {
-  //         character.health = 7;
-  //     console.log(character.health = 7);
-  //   }
-  //   if (character.charClass === "artist") {
-  //        character.stealth = 5;
-  //     console.log(character.stealth = 5);
-  //   }
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('userChoice').addEventListener('click', addChoice);
+  });
+
+
 
   //   document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + character.name + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
 
