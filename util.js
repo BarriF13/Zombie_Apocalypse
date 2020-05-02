@@ -1,30 +1,4 @@
 
-
-
-
-
-
-// if (choice === "sneak" || choice === "sneak by the zombie") {
-//   if (character.stealth === 5) {
-//     document.write("You sneak by the zombie, you clever bastard.")
-//   }
-//   if (character.strength < 5) {
-//     document.write(" You try to slip by the zombie, but accidentally stumble over a can of Beanie Weenies, alerting the zombie. It slowly turns its head and shuffles towards you.");
-//     if (character.strength === 5) {
-//       document.write("Although you have alerted the zombie, but you are able to crush its skull with your bare hands.");
-//       outcome = "win";
-//     } else {
-//       document.write("Weaponless and weak the zombie chomps down on an arm as you fail widely in its general direction.");
-//       outcome = "lose";
-//     }
-//   }
-// }
-// if (outcome === "lose") {
-//   document.write("You lose!.....");
-// } else if (outcome === "win") {
-//   document.write("You win, HOORAY!!!");
-// }
-
 //  var weaponList = ["shovel" , "toothbrush","axe", "crossbow","Rubber chicken"];
 
 //  var weapon = weaponList[ randNum(weaponList.length -1)];
