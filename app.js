@@ -116,35 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // --write the conditional for all the choices
 function game() {
-  if (character.charClass === 'debugger') {
-    if (choice.playerChoice === 'attack') {
-      document.getElementById('charMsg').textContent = "Using only your bear hands " + playerName.pName + ", you slay that zombie! Success! you loot the store for goods and find an axe, a pack of batteries and five can of Diet cokes.";
-      outcome = 'win';
-      character.strength++;
-    } else if (character.strength <= 5) {
-      document.getElementById('charMsg').textContent = "You fearlessly charge zombie with all your strength. Using your mighty powers you crush thy foe as if it were a sheet of paper you needed to shred.";
-      setTimeout(function () {
-        document.getElementById('charMsg').textContent = "Just kidding. you are immediately bitten by the zombie and die. But not all is lost -- if time spent together makes one friends, then you and the zombie become best friends, and live together for ever. The end.YOHO  HAHAHAHA...";
-        outcome = "lose";
-      }, 3000);
-    }
-  }
-  if (choice.playerChoice === "sneak" ||choice.playerChoice === "sneak by the zombie") {
-    if (character.stealth === 5) {
-      document.getElementById('charMsg').textContent = "You sneak by the zombie, you clever b*****d."
-    }
-    if (character.stealth < 5) {
-      document.getElementById('charMsg').textContent = " You try to slip by the zombie, but accidentally stumble over a can of Diet coke, alerting the zombie. It slowly turns its head and shuffles towards you.";
-      if (character.strength === 5) {
-        document.getElementById('charMsg').textContent ="Although you have alerted the zombie, but you are able to crush its skull with your bare hands.";
-        outcome = "win";
-      } else {
-        document.getElementById('charMsg').textContent = "Weaponless and weak the zombie chomps down on an arm as you fail widely in its general direction.";
-        outcome = "lose";
-      }
-    }
+  if (character.charClass === 'soldier') {
+    soldierProfile()
   }
 }
+
 function powerUp() {
   if (character.charClass === "soldier") {
     character.strength = 5;
