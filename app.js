@@ -120,6 +120,8 @@ function game() {
     soldierProfile()
   }else if (character.charClass === 'artist') {
     artistProfile()
+  }else if (character.charClass === 'doctor') {
+    doctorProfile()
   }
 }
 
