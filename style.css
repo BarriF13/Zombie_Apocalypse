@@ -19,7 +19,13 @@ h3, #secondMsg,#charMsg  {
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 5px rgb(176, 177, 177);
 }
-
+#showPoints {
+  margin: auto;
+  padding: 10px;
+  font-size: 36px;
+  color: antiquewhite;
+  text-align: center;
+}
 .container {
   /* max-width: 60%; */
   margin: auto;
@@ -80,6 +86,7 @@ h3, #secondMsg,#charMsg  {
   align-items: center;
   border-radius: 20px;
 }
+
 
 
 

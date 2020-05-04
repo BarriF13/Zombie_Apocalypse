@@ -5,6 +5,7 @@ function doctorProfile (){
     character.strength++;
 
     document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
+   
 
   } else if (choice.playerChoice === "sneak" ||choice.playerChoice === "sneak by the zombie"){
     document.getElementById('charMsg').textContent = "No no no " + playerName.pName + " , while you where sneaking out behind the zombie, accidentally dropped a can of diet coke...OH DEAR";
@@ -15,5 +16,7 @@ function doctorProfile (){
     character.stealth++;
 
     document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
+    document.getElementById('userChoice').style.display = 'none';
+    document.getElementById('uChoice').style.display = 'none';
   }
 }
