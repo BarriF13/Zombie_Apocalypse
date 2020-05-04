@@ -84,7 +84,7 @@ const addCharacter = (ev) => {
     charClass: document.getElementById('character').value.toLowerCase()
   }
   //---make random character --how can I see the input is match to input
-  if (!character.charClass ) {
+  if (!character.charClass) {
     character.charClass = "doctor ";
   }
   document.getElementById('userCharacter').style.display = 'none';
@@ -118,10 +118,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function game() {
   if (character.charClass === 'soldier') {
     soldierProfile()
-  }else if (character.charClass === 'artist') {
+  } else if (character.charClass === 'artist') {
     artistProfile()
-  }else if (character.charClass === 'doctor') {
+  } else if (character.charClass === 'doctor') {
     doctorProfile()
+  } else if (character.charClass === 'debugger') {
+    debuggerProfile()
+  } else {
+   unknownProfile()
   }
 }
 
@@ -141,15 +145,15 @@ function powerUp() {
   }
 
 }
-function result (){
-  setTimeout( function () {
-  if (outcome === "lose") {
-    
-    document.getElementById('charMsg').textContent = "You lose!.....";
+function result() {
+  setTimeout(function () {
+    if (outcome === "lose") {
+
+      document.getElementById('charMsg').textContent = "You lose!.....";
     } else if (outcome === "win") {
       document.getElementById('charMsg').textContent = "You win, HOORAY!!!";
       document.getElementById('userChoice').style.display = 'none';
-  document.getElementById('uChoice').style.display = 'none';
+      document.getElementById('uChoice').style.display = 'none';
     }
   }, 3000);
 }

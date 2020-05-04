@@ -1,12 +1,10 @@
-function soldierProfile (){
+function unknownProfile (){
   if (choice.playerChoice === 'attack') {
-    document.getElementById('charMsg').textContent = "A brave soldier as you are, attacking the zombie with your bare hand "+ playerName.pName +", you slay that zombie!Victory! you just picked up a big axe and  off to kill them all.";
+    document.getElementById('charMsg').textContent = " You didn't choose the right character but hey Attacking the zombie with your bare hand "+ playerName.pName +", you slay that zombie!Victory! you just picked up a big axe and  off to kill them all.";
     outcome ='win';
     character.strength++;
 
     document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
-    document.getElementById('userChoice').style.display = 'none';
-    document.getElementById('uChoice').style.display = 'none';
 
   } else if (choice.playerChoice === "sneak" ||choice.playerChoice === "sneak by the zombie"){
     document.getElementById('charMsg').textContent = "No no no " + playerName.pName + " , while you where sneaking out behind the zombie, accidentally dropped a can of diet coke...OH DEAR";
