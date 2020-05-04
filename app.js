@@ -61,7 +61,7 @@ const addName = (ev) => {
     playerName.pName = " Alice of Resident Evil ";
   }
   document.getElementById('charMsg').textContent =
-    "These times test the strengths of our character. What were you before the war? ( Choose from: soldier, doctor, artist or debugger)";
+    "These times test the strengths of our character. What were you before the war? Choose from: soldier, doctor, artist or debugger";
   document.getElementById('secondMsg').style.display = 'none';
   document.getElementById('name').style.display = 'none';
   document.getElementById('userName').style.display = 'none';
@@ -118,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function game() {
   if (character.charClass === 'soldier') {
     soldierProfile()
+  }else if (character.charClass === 'artist') {
+    artistProfile()
   }
 }
 

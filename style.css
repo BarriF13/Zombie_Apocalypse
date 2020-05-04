@@ -12,7 +12,7 @@ h1 {
   text-align: center;
 }
 
-h3, #secondMsg {
+h3, #secondMsg,#charMsg  {
   font-family: 'Permanent Marker', cursive;
   font-size: 36px;
   text-align: center;
@@ -28,7 +28,7 @@ h3, #secondMsg {
 #intro{
   padding: 20px;
   width: 80%;
-  margin: auto;
+  margin: 10px auto;
 }
 
 
@@ -73,31 +73,13 @@ h3, #secondMsg {
   background-color: rgb(0, 0, 0);
 }
 
-
-
-#name {
+#name, #character,#uChoice {
   font-size: 30px;
-  margin: 10px auto;
+  margin: 50px auto 20px;
   text-align: center;
   align-items: center;
+  border-radius: 20px;
 }
 
-#character {
-  font-size: 30px;
-  margin: 10px auto;
-  text-align: center;
-  align-items: center;
-}
 
-#charMsg {
-  font-size: 36px;
-  color: rgb(107, 110, 110);
-  text-align: center;
-}
 
-#uChoice {
-  font-size: 30px;
-  margin: 10px auto;
-  text-align: center;
-  align-items: center;
-}
