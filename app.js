@@ -36,7 +36,7 @@ startButton.addEventListener('click', function () {
   function startAgain () { location.reload();}
 //--going to stage two of the game
 document.getElementById("gameStart").addEventListener('click', function () {
-  var beginningScenario = [" You wake up in a hospital. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
+  var beginningScenario = [" You wake up in a dark room. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
   function randNum(range) {
     "use strict";
     if (typeof range === "number") {
@@ -115,6 +115,9 @@ const addChoice = (ev) => {
     playerChoice: document.getElementById('uChoice').value.toLowerCase()
     
   }
+  if(!choice.playerChoice) {
+    choice.playerChoice = "attack";
+  }
   document.getElementById('userChoice').style.display = 'none';
   document.getElementById('uChoice').style.display = 'none';
   console.log(choice.playerChoice);
@@ -122,7 +125,7 @@ const addChoice = (ev) => {
   game();
   setTimeout(() => {
     result(); 
-  }, 2000);
+  }, 3000);
  
 }
 document.addEventListener('DOMContentLoaded', () => {

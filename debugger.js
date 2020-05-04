@@ -8,7 +8,7 @@ function debuggerProfile (){
     document.getElementById('charMsg').textContent =  playerName.pName + " , while you where sneaking out behind the zombie, accidentally dropped a can of diet coke...OH DEAR";
     setTimeout(() => {
       document.getElementById('charMsg').textContent = "And now zombie is jumping on you and bit your head off";
-    }, 2000);
+    }, 3000);
     outcome ='lose';
     character.stealth++;
 

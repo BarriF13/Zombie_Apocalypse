@@ -1,19 +1,18 @@
 function unknownProfile (){
   if (choice.playerChoice === 'attack') {
-    document.getElementById('charMsg').textContent = " You didn't choose the right character but hey Attacking the zombie with your bare hand "+ playerName.pName +", you slay that zombie!Victory! you just picked up a big axe and  off to kill them all.";
-    outcome ='win';
+    document.getElementById('charMsg').textContent = " You didn't choose the right character but hey Attacking the zombie with your axe "+ playerName.pName +", you smash zombie's head !WOW! you are now getting ready for more....";
+    setTimeout(() => {"but you just didn't noticed that you are bitten ";
+  }, 3000);
+    outcome ='lose';
     character.strength++;
 
-    document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
 
   } else if (choice.playerChoice === "sneak" ||choice.playerChoice === "sneak by the zombie"){
-    document.getElementById('charMsg').textContent = "No no no " + playerName.pName + " , while you where sneaking out behind the zombie, accidentally dropped a can of diet coke...OH DEAR";
+    document.getElementById('charMsg').textContent = "No character ?" + playerName.pName + " , well if you didn't make an effort to choose a character ... ";
     setTimeout(() => {
-      document.getElementById('charMsg').textContent = "And now zombie is jumping on you and bit your head off";
-    }, 2000);
+      document.getElementById('charMsg').textContent = " and now 5 zombies are dancing around you while the are coming towards you...";
+    }, 3000);
     outcome ='lose';
     character.stealth++;
-
-    document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
   }
 }

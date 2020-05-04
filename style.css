@@ -92,6 +92,10 @@ h3, #secondMsg,#charMsg  {
   width: 400px;
   cursor: pointer;
 }
+#startA:hover {
+  color: rgb(85, 81, 81);
+  background-color: rgb(0, 0, 0);
+}
 
 #name, #character,#uChoice {
   font-size: 30px;
