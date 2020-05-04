@@ -1,12 +1,12 @@
 function doctorProfile (){
   if (choice.playerChoice === 'attack') {
-    document.getElementById('charMsg').textContent = "Attacking the zombie with your bare hand "+ playerName.pName +", you slay that zombie!Victory! you just picked up a big axe and  off to kill them all.";
+    document.getElementById('charMsg').textContent = "Attacking the zombie with Scalpels, Doctor "+ playerName.pName +", you cut that zombie in half! GROSS, but it worked .";
+    setTimeout(() => {
+      document.getElementById('charMsg').textContent = "you find a scissor and getting ready to walk into the dark street... ";
+    }, 2000);
     outcome ='win';
     character.strength++;
-
-    document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
    
-
   } else if (choice.playerChoice === "sneak" ||choice.playerChoice === "sneak by the zombie"){
     document.getElementById('charMsg').textContent = "No no no " + playerName.pName + " , while you where sneaking out behind the zombie, accidentally dropped a can of diet coke...OH DEAR";
     setTimeout(() => {
@@ -14,9 +14,5 @@ function doctorProfile (){
     }, 2000);
     outcome ='lose';
     character.stealth++;
-
-    document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
-    document.getElementById('userChoice').style.display = 'none';
-    document.getElementById('uChoice').style.display = 'none';
   }
 }
