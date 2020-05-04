@@ -8,9 +8,9 @@ function doctorProfile (){
     character.strength++;
    
   } else if (choice.playerChoice === "sneak" ||choice.playerChoice === "sneak by the zombie"){
-    document.getElementById('charMsg').textContent = "No no no " + playerName.pName + " , while you where sneaking out behind the zombie, accidentally dropped a can of diet coke...OH DEAR";
+    document.getElementById('charMsg').textContent = "Oh Doctor " + playerName.pName + " , you are under the table , a cat passing you and you just sneezed ";
     setTimeout(() => {
-      document.getElementById('charMsg').textContent = "And now zombie is jumping on you and bit your head off";
+      document.getElementById('charMsg').textContent = "And now zombie is hugging you...The End";
     }, 2000);
     outcome ='lose';
     character.stealth++;
