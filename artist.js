@@ -1,19 +1,16 @@
-function artistProfile (){
+function artistProfile() {
   if (choice.playerChoice === 'attack') {
-    document.getElementById('charMsg').textContent = "Attacking the zombie with your bare hand "+ playerName.pName +", you slay that zombie!Victory! you just picked up a big axe and  off to kill them all.";
-    outcome ='win';
+    document.getElementById('charMsg').textContent = "Attacking the zombie with your with paint brush? really? " + playerName.pName + ". But who knew !Amazing! Now you find a big color spray and ready to paint the town RED.";
+    outcome = 'win';
     character.strength++;
 
-    document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
-
-  } else if (choice.playerChoice === "sneak" ||choice.playerChoice === "sneak by the zombie"){
-    document.getElementById('charMsg').textContent = "No no no " + playerName.pName + " , while you where sneaking out behind the zombie, accidentally dropped a can of diet coke...OH DEAR";
+  } else if (choice.playerChoice === "sneak" || choice.playerChoice === "sneak by the zombie") {
+    document.getElementById('charMsg').textContent = "Clever " + playerName.pName + " , hiding behind the big canvases. Trying to sneak out from the studio but you just dropped a paint pot on the floor";
     setTimeout(() => {
-      document.getElementById('charMsg').textContent = "And now zombie is jumping on you and bit your head off";
+      document.getElementById('charMsg').textContent = "When you lift your head up a zombie is smiling at you. OOPS ...But this is your lucky day" + playerName.pName + " because this game is written by another artist \"Barri\" so she let you live...";
     }, 2000);
-    outcome ='lose';
-    character.stealth++;
 
-    document.getElementById('showPoints').textContent = "your health : "+character.health+"your strength : " +character.strength;
- }
+    outcome = 'win';
+    character.stealth++;
+  }
 }
