@@ -8,7 +8,7 @@ function doctorProfile (){
     character.strength++;
    
   } else if (choice.playerChoice === "sneak" ||choice.playerChoice === "sneak by the zombie"){
-    document.getElementById('charMsg').textContent = "Oh Doctor " + playerName.pName + " , you are under the table , a cat passing you and you just sneezed ";
+    document.getElementById('charMsg').textContent = "Oh Doctor " + playerName.pName + " , you are under the counter, a cat passing you and you just sneezed ";
     setTimeout(() => {
       document.getElementById('charMsg').textContent = "And now zombie is hugging you...The End";
     }, 2000);

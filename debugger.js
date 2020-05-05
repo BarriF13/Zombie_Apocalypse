@@ -1,6 +1,6 @@
 function debuggerProfile (){
   if (choice.playerChoice === 'attack') {
-    document.getElementById('charMsg').textContent = "{Attacking the zombie with your keyboard}"+ playerName.pName +", {you slay that zombie! you now picked up a can of coke and a router and heading out...";
+    document.getElementById('charMsg').textContent = "Attacking the zombie with your keyboard "+ playerName.pName +", you slay that zombie! you now picked up a can of coke and a router and heading out...";
     outcome ='win';
     character.strength++;
 

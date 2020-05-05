@@ -36,7 +36,7 @@ startButton.addEventListener('click', function () {
   function startAgain () { location.reload();}
 //--going to stage two of the game
 document.getElementById("gameStart").addEventListener('click', function () {
-  var beginningScenario = [" You wake up in a dark room. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
+  var beginningScenario = [" You wake up in a dark. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
   function randNum(range) {
     "use strict";
     if (typeof range === "number") {
@@ -170,13 +170,14 @@ function result() {
 
       document.getElementById('showPoints').textContent = "your health : "+character.health+"- your strength : " +character.strength;
 
+      document.getElementById('startA').style.display = 'block';
+
     } else if (outcome === "win") {
 
       document.getElementById('charMsg').textContent = "You win, HOORAY!!!";
-      document.getElementById('startA').style.display = 'block';
-
+    
       document.getElementById('showPoints').textContent = "your health : "+character.health+"- your strength : " +character.strength;
-     
+      document.getElementById('startA').style.display = 'block';
     }
   }, 3000);
 }

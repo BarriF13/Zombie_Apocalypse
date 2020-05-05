@@ -12,6 +12,5 @@ function soldierProfile (){
     outcome ='lose';
     character.stealth++;
 
-   
   }
 }

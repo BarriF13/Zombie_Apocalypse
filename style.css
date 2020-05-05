@@ -2,7 +2,12 @@
 /* font-family: 'Permanent Marker', cursive;
 font-family: 'Nosifer', cursive;
 font-family: 'Creepster', cursive; */
+*{
+  margin-top: 0px;
+}
 body {
+  margin: 0;
+  padding: 0;
   background-color: rgba(105, 27, 42, 0.993);
   font-family: 'Creepster', cursive;
 }
@@ -19,17 +24,26 @@ h3, #secondMsg,#charMsg  {
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 5px rgb(176, 177, 177);
 }
+.image {
+  margin:0 auto;
+
+top:0;
+display: block;
+}
 #showPoints {
   margin: auto;
   padding: 10px;
   font-size: 36px;
   color: antiquewhite;
   text-align: center;
+  align-items: center;
 }
 .container {
   /* max-width: 60%; */
   margin: auto;
-  padding: 10px
+  padding-top: 0;
+  padding:0px 10px 10px;
+
 }
 #intro{
   padding: 20px;
@@ -104,7 +118,18 @@ h3, #secondMsg,#charMsg  {
   align-items: center;
   border-radius: 20px;
 }
+#showPoints{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 24px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 20px auto 20px;
 
+}
 
+@media screen and (max-width: 768px) {
+  body {font-size: 0.7em; }
+
+}
 
 
