@@ -8,7 +8,7 @@ function artistProfile() {
     document.getElementById('charMsg').textContent = "Clever " + playerName.pName + " , hiding behind the big canvases in the shop. Trying to sneak out  but you just dropped a paint pot on the floor";
     setTimeout(() => {
       document.getElementById('charMsg').textContent = "When you lift your head up a zombie is smiling at you. OOPS ...But this is your lucky day" + playerName.pName + " because this game is written by another artist \"Barri\" so she let you live...";
-    }, 2000);
+    },4000);
 
     outcome = 'win';
     character.stealth++;

@@ -1,4 +1,4 @@
-// window.onload = function(){  alert('test'); } 
+//  window.onload = function(){  alert('This is a text based game '); } 
 
 //--- start of the 
 
@@ -13,14 +13,16 @@ startButton.addEventListener('click', function () {
   if (openingMessage.classList.contains('d-none')) {
     openingMessage.classList.remove('d-none');
     startButton.textContent = 'Back?';
+    
   } else {
     openingMessage.classList.add('d-none');
     startButton.textContent = 'Too scared?! , you are back to the beginning';
     setTimeout(function () {
-      addEventListener('click', function () { location.reload();})
+      addEventListener('click', function () { location.reload(); })
     }, 10);
-  
+
   }
+
   document.getElementById('userName').style.display = 'none';
   document.getElementById('name').style.display = 'none';
 
@@ -31,9 +33,10 @@ startButton.addEventListener('click', function () {
   document.getElementById('uChoice').style.display = 'none';
   document.getElementById('startA').style.display = 'none';
 
+ 
 });
 
-  function startAgain () { location.reload();}
+function startAgain() { location.reload(); }
 //--going to stage two of the game
 document.getElementById("gameStart").addEventListener('click', function () {
   var beginningScenario = [" You wake up in a dark. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
@@ -48,7 +51,7 @@ document.getElementById("gameStart").addEventListener('click', function () {
 
   document.getElementById('intro').style.display = 'none';
   document.getElementById('gameStart').style.display = 'none';
-  
+
 })
 
 document.getElementById('gameStart').addEventListener('click', function () {
@@ -56,7 +59,7 @@ document.getElementById('gameStart').addEventListener('click', function () {
   setTimeout(function () {
     document.getElementById('userName').style.display = 'block';
     document.getElementById('name').style.display = 'block';
- 
+
   }, 1000);
 
 })
@@ -81,7 +84,28 @@ const addName = (ev) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('userName').addEventListener('click', addName);
+  document.getElementById('userChoice').addEventListener('click', addChoice);
+  document.getElementById('userCharacter').addEventListener('click', addCharacter);
 });
+
+document.getElementById("name").addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById('userName').click();
+  }
+})
+document.getElementById("character").addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById('userCharacter').click();
+  }
+})
+document.getElementById("uChoice").addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById('userChoice').click();
+  }
+})
 
 const addCharacter = (ev) => {
   ev.preventDefault(); //to stop the form submitting 
@@ -104,18 +128,16 @@ const addCharacter = (ev) => {
   console.log(character.charClass);
   // powerUp();
 }
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('userCharacter').addEventListener('click', addCharacter);
-});
+
 
 
 const addChoice = (ev) => {
   ev.preventDefault();
   choice = {
     playerChoice: document.getElementById('uChoice').value.toLowerCase()
-    
+
   }
-  if(!choice.playerChoice) {
+  if (!choice.playerChoice) {
     choice.playerChoice = "attack";
   }
   document.getElementById('userChoice').style.display = 'none';
@@ -124,13 +146,13 @@ const addChoice = (ev) => {
   //run a function here --
   game();
   setTimeout(() => {
-    result(); 
+    result();
   }, 3000);
- 
+
 }
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('userChoice').addEventListener('click', addChoice);
-});
+
+
+
 // --write the conditional for all the choices
 function game() {
   if (character.charClass === 'soldier') {
@@ -142,7 +164,7 @@ function game() {
   } else if (character.charClass === 'debugger') {
     debuggerProfile()
   } else {
-   unknownProfile()
+    unknownProfile()
   }
 }
 
@@ -168,15 +190,15 @@ function result() {
 
       document.getElementById('charMsg').textContent = "You lose!.....";
 
-      document.getElementById('showPoints').textContent = "your health : "+character.health+"- your strength : " +character.strength;
+      document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
 
       document.getElementById('startA').style.display = 'block';
 
     } else if (outcome === "win") {
 
       document.getElementById('charMsg').textContent = "You win, HOORAY!!!";
-    
-      document.getElementById('showPoints').textContent = "your health : "+character.health+"- your strength : " +character.strength;
+
+      document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
       document.getElementById('startA').style.display = 'block';
     }
   }, 3000);

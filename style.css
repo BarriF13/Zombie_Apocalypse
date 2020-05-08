@@ -1,10 +1,13 @@
-
 /* font-family: 'Permanent Marker', cursive;
 font-family: 'Nosifer', cursive;
-font-family: 'Creepster', cursive; */
-*{
+font-family: 'Creepster', cursive; 
+font-family: 'Roboto', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+* {
   margin-top: 0px;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -17,19 +20,37 @@ h1 {
   text-align: center;
 }
 
-h3, #secondMsg,#charMsg  {
+h2 {
+  margin: 50px 0 0 0;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(0, 0, 0);
+  line-height: 1.5em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgb(78, 78, 78);
+}
+
+.instruction {
+  text-align: center;
+  padding: 5px;
+  margin: 50px;
+}
+
+h3, #secondMsg, #charMsg {
+  margin: 50px 0 0 0;
   font-family: 'Permanent Marker', cursive;
   font-size: 36px;
   text-align: center;
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 5px rgb(176, 177, 177);
 }
-.image {
-  margin:0 auto;
 
-top:0;
-display: block;
+.image {
+  margin: 0 auto;
+  top: 0;
+  display: block;
 }
+
 #showPoints {
   margin: auto;
   padding: 10px;
@@ -38,20 +59,19 @@ display: block;
   text-align: center;
   align-items: center;
 }
+
 .container {
   /* max-width: 60%; */
   margin: auto;
   padding-top: 0;
-  padding:0px 10px 10px;
-
+  padding: 0px 10px 10px;
 }
-#intro{
+
+#intro {
   padding: 20px;
   width: 80%;
   margin: 10px auto;
 }
-
-
 
 .butt {
   font-family: 'Creepster', cursive;
@@ -66,10 +86,13 @@ display: block;
   padding: 20px;
   width: 350px;
   cursor: pointer;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
 }
 
 .butt:hover {
   color: rgb(85, 81, 81);
+  border-radius: 60%;
   background-color: rgb(0, 0, 0);
 }
 
@@ -86,13 +109,17 @@ display: block;
   padding: 20px;
   width: 400px;
   cursor: pointer;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
 }
 
 .stageT:hover {
   color: rgb(85, 81, 81);
+  border-radius: 60%;
   background-color: rgb(0, 0, 0);
 }
-#startA{
+
+#startA {
   font-family: 'Creepster', cursive;
   font-size: 24px;
   background-color: rgba(102, 24, 39, 0.993);
@@ -105,31 +132,34 @@ display: block;
   padding: 20px;
   width: 400px;
   cursor: pointer;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
 }
+
 #startA:hover {
   color: rgb(85, 81, 81);
+  border-radius: 60%;
   background-color: rgb(0, 0, 0);
 }
 
-#name, #character,#uChoice {
+#name, #character, #uChoice {
   font-size: 30px;
   margin: 50px auto 20px;
   text-align: center;
   align-items: center;
   border-radius: 20px;
 }
-#showPoints{
+
+#showPoints {
   font-family: 'Permanent Marker', cursive;
   font-size: 24px;
   text-align: center;
   color: rgb(0, 0, 0);
   margin: 20px auto 20px;
-
 }
 
 @media screen and (max-width: 768px) {
-  body {font-size: 0.7em; }
-
+  body {
+    font-size: 0.7em;
+  }
 }
-
-

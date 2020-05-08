@@ -8,20 +8,25 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<link href="https://fonts.googleapis.com/css?family=Creepster|Nosifer|Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Creepster|Nosifer|Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>ZOMBIE APOCALYPSE</title>
 </head>
 
 <body>
   <div class="container">
-   <img class="image"src="zombie-image.jpg" alt="">
+    <!-- <img class="image"src="zombie-image.jpg" alt=""> -->
     <h1>YOU HAVE ENTERED THE ZOMBIE WORLD</h1>
     <h2 id="message" class="col-sm-12"></h2>
     <a id="start" class="butt">Let the game begin</a>
-
-    <div id="openingMSG" class="container d-none">
+<!-- 
+    <div id="instruct" class="instruction">
+      <h2>This is a text based adventure<br>Please read everything and<br> Wait for the game to show itself to
+        you<br>THANK YOU</h2>
+    </div> -->
     
+    <div id="openingMSG" class="container d-none">
+
       <h3 id="intro">One day you wake up and the world as you know has ended. The dead come to life and pray on the
         living. There is no hope, no cure, only survival. Welcome to the zombie apocalypse.</h3>
 
@@ -41,15 +46,15 @@
       <div id="text"></div>
       <div id="showPoints"></div>
       <button id="startA" onclick="startAgain()">Try again?</button>
-    
+
     </div>
   </div>
-  <script  src="soldier.js"></script>
-  <script  src="artist.js"></script>
-  <script  src="doctor.js"></script>
-  <script  src="debugger.js"></script>
-  <script  src="unknown.js"></script>
-  <script  src="app.js"></script>
+  <script src="soldier.js"></script>
+  <script src="artist.js"></script>
+  <script src="doctor.js"></script>
+  <script src="debugger.js"></script>
+  <script src="unknown.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
