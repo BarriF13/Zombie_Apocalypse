@@ -8,15 +8,16 @@ var character = {};
 var choice = {};
 
 const startButton = document.getElementById("start");
+startButton.addEventListener('click', hide);
 startButton.addEventListener('click', function () {
   const openingMessage = document.getElementById('openingMSG');
   if (openingMessage.classList.contains('d-none')) {
     openingMessage.classList.remove('d-none');
     startButton.textContent = 'Back?';
-    
+
   } else {
     openingMessage.classList.add('d-none');
-    startButton.textContent = 'Too scared?! , you are back to the beginning';
+    startButton.textContent = 'Too scared?!';
     setTimeout(function () {
       addEventListener('click', function () { location.reload(); })
     }, 10);
@@ -33,8 +34,12 @@ startButton.addEventListener('click', function () {
   document.getElementById('uChoice').style.display = 'none';
   document.getElementById('startA').style.display = 'none';
 
- 
+
 });
+function hide() {
+
+  document.getElementById('instruct').style.display = 'none';
+}
 
 function startAgain() { location.reload(); }
 //--going to stage two of the game
@@ -48,7 +53,7 @@ document.getElementById("gameStart").addEventListener('click', function () {
   }
   //I need to print this in a specific html add
   document.getElementById('secondMsg').textContent = (beginningScenario[randNum(beginningScenario.length - 1)]);
-
+  document.getElementById('Z1').style.display = 'none';
   document.getElementById('intro').style.display = 'none';
   document.getElementById('gameStart').style.display = 'none';
 

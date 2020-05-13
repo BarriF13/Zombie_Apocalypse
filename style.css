@@ -3,7 +3,7 @@ font-family: 'Nosifer', cursive;
 font-family: 'Creepster', cursive; 
 font-family: 'Roboto', sans-serif;*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
   margin-top: 0px;
 }
@@ -11,34 +11,55 @@ font-family: 'Roboto', sans-serif;*/
 body {
   margin: 0;
   padding: 0;
+  color: rgb(0, 0, 0);
   background-color: rgba(105, 27, 42, 0.993);
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
+  animation: openning 5s;
+ 
 }
-
+@keyframes openning {
+  0% {background-color: rgb(0, 0, 0); text-shadow: 0px 0px 0px rgb(0, 0, 0);}
+  100% {background-color:rgba(105, 27, 42, 0.993); text-shadow: 1px 1px 5px rgb(176, 177, 177);}
+}
+@keyframes openning2 {
+  0% {background-color: rgb(0, 0, 0); }
+  100% {background-color:rgba(105, 27, 42, 0.993);}
+}
 h1 {
   font-size: 66px;
   text-align: center;
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 1px 5px rgb(176, 177, 177);
+  animation: openning 5s;
 }
 
 h2 {
   margin: 50px 0 0 0;
   font-size: 22px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: rgb(0, 0, 0);
   line-height: 1.5em;
   font-weight: bold;
-  text-shadow: 1px 1px 2px rgb(78, 78, 78);
+  animation-name: colors;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
 }
 
+@keyframes colors {
+  0% {   opacity: 0%; }
+  100% {  opacity: 100%; }
+}
 .instruction {
   text-align: center;
   padding: 5px;
   margin: 50px;
 }
 
-h3, #secondMsg, #charMsg {
+h3,
+#secondMsg,
+#charMsg {
   margin: 50px 0 0 0;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 36px;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -50,6 +71,25 @@ h3, #secondMsg, #charMsg {
   top: 0;
   display: block;
 }
+.zombieImg1 {
+  background-image: url(./img/zombie-name.png);
+  background-size: cover;
+ position: relative;
+  margin: 0 auto;
+ animation-name: firstAnimation;
+ animation-duration: 6s;
+ animation-delay: 3s;
+ animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+@keyframes firstAnimation {
+  0%  { left:-500px; opacity: 0%; width: 10px; height: 10px;}
+  25% { left: 0px; opacity: 50%;  }
+  50% { }
+  75% {  }
+  100%{ left:0px; top:0px; transform: rotate(360deg); width:300px; height: 300px;opacity: 100%; }
+} 
 
 #showPoints {
   margin: auto;
@@ -66,7 +106,10 @@ h3, #secondMsg, #charMsg {
   padding-top: 0;
   padding: 0px 10px 10px;
 }
-
+#headerTitle {
+  height: 200px;
+  background: url(./img/header.png) no-repeat top;
+}
 #intro {
   padding: 20px;
   width: 80%;
@@ -74,7 +117,7 @@ h3, #secondMsg, #charMsg {
 }
 
 .butt {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 36px;
   background-color: rgba(102, 24, 39, 0.993);
   display: block;
@@ -88,6 +131,7 @@ h3, #secondMsg, #charMsg {
   cursor: pointer;
   transition-property: background, border-radius;
   transition-duration: 1s;
+  animation: openning2 5s;
 }
 
 .butt:hover {
@@ -97,7 +141,7 @@ h3, #secondMsg, #charMsg {
 }
 
 .stageT {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 36px;
   background-color: rgba(102, 24, 39, 0.993);
   display: block;
@@ -120,7 +164,7 @@ h3, #secondMsg, #charMsg {
 }
 
 #startA {
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 24px;
   background-color: rgba(102, 24, 39, 0.993);
   display: block;
@@ -142,7 +186,9 @@ h3, #secondMsg, #charMsg {
   background-color: rgb(0, 0, 0);
 }
 
-#name, #character, #uChoice {
+#name,
+#character,
+#uChoice {
   font-size: 30px;
   margin: 50px auto 20px;
   text-align: center;
@@ -151,7 +197,7 @@ h3, #secondMsg, #charMsg {
 }
 
 #showPoints {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 24px;
   text-align: center;
   color: rgb(0, 0, 0);
