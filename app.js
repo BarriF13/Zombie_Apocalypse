@@ -34,6 +34,9 @@ startButton.addEventListener('click', function () {
   document.getElementById('uChoice').style.display = 'none';
   document.getElementById('startA').style.display = 'none';
 
+  document.getElementById('N1').style.display = 'none';
+  document.getElementById('Chars').style.display = 'none';
+
 
 });
 function hide() {
@@ -64,6 +67,7 @@ document.getElementById('gameStart').addEventListener('click', function () {
   setTimeout(function () {
     document.getElementById('userName').style.display = 'block';
     document.getElementById('name').style.display = 'block';
+    document.getElementById('N1').style.display = 'block';
 
   }, 1000);
 
@@ -81,9 +85,11 @@ const addName = (ev) => {
   document.getElementById('secondMsg').style.display = 'none';
   document.getElementById('name').style.display = 'none';
   document.getElementById('userName').style.display = 'none';
+  document.getElementById('N1').style.display = 'none';
 
   document.getElementById('userCharacter').style.display = 'block';
   document.getElementById('character').style.display = 'block';
+  document.getElementById('Chars').style.display = 'block';
   console.log(playerName.pName);
 }
 
