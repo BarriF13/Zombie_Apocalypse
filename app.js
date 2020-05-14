@@ -37,6 +37,8 @@ startButton.addEventListener('click', function () {
   document.getElementById('N1').style.display = 'none';
   document.getElementById('Chars').style.display = 'none';
   document.getElementById('move').style.display = 'none';
+  document.getElementById('showLoser').style.display = 'none';
+  document.getElementById('showPoints').style.display = 'none';
 
 
 });
@@ -81,8 +83,8 @@ const addName = (ev) => {
   if (!playerName.pName) {
     playerName.pName = " Alice of Resident Evil ";
   }
-  document.getElementById('charMsg').textContent =
-    "These times test the strengths of our character. What were you before the war? Choose from: soldier, doctor, artist or debugger";
+  document.getElementById('charMsg').innerHTML =
+    "These times test the strengths of our character. <br> Choose from: soldier, doctor, artist or debugger";
   document.getElementById('secondMsg').style.display = 'none';
   document.getElementById('name').style.display = 'none';
   document.getElementById('userName').style.display = 'none';
@@ -206,15 +208,17 @@ function result() {
 
       document.getElementById('charMsg').textContent = "You lose!.....";
 
-      document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
-
+      // document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
+      
+      document.getElementById('showLoser').style.display = 'block';
       document.getElementById('startA').style.display = 'block';
 
     } else if (outcome === "win") {
 
       document.getElementById('charMsg').textContent = "You win, HOORAY!!!";
 
-      document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
+      // document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
+      document.getElementById('showPoints').style.display = 'block';
       document.getElementById('startA').style.display = 'block';
     }
   }, 3000);

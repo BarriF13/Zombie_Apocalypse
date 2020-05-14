@@ -45,7 +45,7 @@ h1 {
 
 h2 {
   margin: 50px 0 0 0;
-  font-size: 22px;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
   color: rgb(0, 0, 0);
   line-height: 1.5em;
@@ -71,9 +71,9 @@ h2 {
 }
 
 h3, #secondMsg, #charMsg {
-  margin: 50px 0 0 0;
+  margin: 5px 0 0 0;
   font-family: "Permanent Marker", cursive;
-  font-size: 36px;
+  font-size: 30px;
   text-align: center;
   color: rgb(0, 0, 0);
   text-shadow: 1px 1px 5px rgb(176, 177, 177);
@@ -168,7 +168,7 @@ h3, #secondMsg, #charMsg {
   height: 320px;
   background-image: url(./img/groupBW.png) ;
   margin: 0 auto;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px 0px 10px;
   background-size: cover;
   animation: character 5s;
 
@@ -202,12 +202,32 @@ h3, #secondMsg, #charMsg {
 
 
 #showPoints {
-  margin: auto;
-  padding: 10px;
-  font-size: 36px;
-  color: antiquewhite;
-  text-align: center;
-  align-items: center;
+  width: 250px;
+  height: 366px;
+  margin: 0 auto;
+  padding:3px;
+  background-size: cover;
+background-image: url(./img/winner.png);
+animation: loose 5s;
+}
+@keyframes loose{
+  0%{opacity: 0%;}
+  100%{opacity: 100%;  transform: rotate(360deg);}
+
+}
+#showLoser {
+  width: 250px;
+  height: 314px;
+  margin: 0 auto;
+  padding: 5px;
+background-image: url(./img/looser.png);
+background-size: cover;
+animation: loose 5s;
+}
+@keyframes loose{
+  0%{opacity: 0%;}
+  100%{opacity: 100%;  transform: rotate(360deg);}
+
 }
 
 .container {
@@ -238,7 +258,7 @@ h3, #secondMsg, #charMsg {
   border: 3px solid rgb(0, 0, 0);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
   width: 350px;
   cursor: pointer;
   transition-property: background, border-radius;
@@ -300,7 +320,7 @@ h3, #secondMsg, #charMsg {
 
 #name, #character, #uChoice {
   font-size: 30px;
-  margin: 50px auto 20px;
+  margin:10px auto 20px;
   text-align: center;
   align-items: center;
   border-radius: 20px;
