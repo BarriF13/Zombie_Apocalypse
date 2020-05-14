@@ -36,6 +36,7 @@ startButton.addEventListener('click', function () {
 
   document.getElementById('N1').style.display = 'none';
   document.getElementById('Chars').style.display = 'none';
+  document.getElementById('move').style.display = 'none';
 
 
 });
@@ -90,6 +91,7 @@ const addName = (ev) => {
   document.getElementById('userCharacter').style.display = 'block';
   document.getElementById('character').style.display = 'block';
   document.getElementById('Chars').style.display = 'block';
+  
   console.log(playerName.pName);
 }
 
@@ -132,9 +134,11 @@ const addCharacter = (ev) => {
   }
   document.getElementById('userCharacter').style.display = 'none';
   document.getElementById('character').style.display = 'none';
+  document.getElementById('Chars').style.display = 'none';
 
   document.getElementById('userChoice').style.display = 'block';
   document.getElementById('uChoice').style.display = 'block';
+  document.getElementById('move').style.display = 'block';
   document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + playerName.pName + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
   console.log(character.charClass);
   // powerUp();
@@ -153,6 +157,7 @@ const addChoice = (ev) => {
   }
   document.getElementById('userChoice').style.display = 'none';
   document.getElementById('uChoice').style.display = 'none';
+  document.getElementById('move').style.display = 'none';
   console.log(choice.playerChoice);
   //run a function here --
   game();
