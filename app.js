@@ -45,6 +45,17 @@ startButton.addEventListener('click', function () {
   document.getElementById('doctorImgLoose1').style.display='none';
   document.getElementById('doctorImgLoose2').style.display='none';
  
+  document.getElementById('artistWin').style.display='none';
+  document.getElementById('artistLoose1').style.display='none';
+  document.getElementById('artistLoose2').style.display='none';
+
+  document.getElementById('soldierWin').style.display='none';
+  document.getElementById('soldierLoose1').style.display='none';
+  document.getElementById('soldierLoose2').style.display='none';
+
+  document.getElementById('debuggerWin').style.display='none';
+  document.getElementById('debuggerLoose1').style.display='none';
+  document.getElementById('debuggerLoose2').style.display='none';
 
 });
 
@@ -212,7 +223,7 @@ function result() {
   setTimeout(function () {
     if (outcome === "lose") {
 
-      document.getElementById('charMsg').textContent = "You lose!.....";
+      document.getElementById('charMsg').textContent = "You lost!.....";
 
       // document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
       
@@ -222,6 +233,15 @@ function result() {
       document.getElementById('doctorImgWin2').style.display= 'none';
       document.getElementById('doctorImgLoose1').style.display='none';
       document.getElementById('doctorImgLoose2').style.display='none';
+      document.getElementById('artistWin').style.display='none';
+      document.getElementById('artistLoose1').style.display='none';
+      document.getElementById('artistLoose2').style.display='none';
+      document.getElementById('soldierWin').style.display='none';
+      document.getElementById('soldierLoose1').style.display='none';
+      document.getElementById('soldierLoose2').style.display='none';
+      document.getElementById('debuggerWin').style.display='none';
+      document.getElementById('debuggerLoose1').style.display='none';
+      document.getElementById('debuggerLoose2').style.display='none';
 
     } else if (outcome === "win") {
 
@@ -234,6 +254,16 @@ function result() {
       document.getElementById('doctorImgWin2').style.display= 'none';
       document.getElementById('doctorImgLoose1').style.display='none';
       document.getElementById('doctorImgLoose2').style.display='none';
+      document.getElementById('artistWin').style.display='none';
+      document.getElementById('artistLoose1').style.display='none';
+      document.getElementById('artistLoose2').style.display='none';
+      document.getElementById('soldierWin').style.display='none';
+      document.getElementById('soldierLoose1').style.display='none';
+      document.getElementById('soldierLoose2').style.display='none';
+      document.getElementById('debuggerWin').style.display='none';
+      document.getElementById('debuggerLoose1').style.display='none';
+      document.getElementById('debuggerLoose2').style.display='none';
+      
     }
   },28000);
 }

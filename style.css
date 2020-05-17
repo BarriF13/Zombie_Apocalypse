@@ -341,6 +341,195 @@ animation: loose 5s;
   animation-fill-mode: forwards;
 }
 
+#artistWin{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-artist-win.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 28s;
+  animation-fill-mode: forwards;
+}
+
+#artistLoose1{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-artist-lost.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+@keyframes docWin{
+  0% { width: 0px;
+    height: 400px;
+    opacity: 0%;
+  }
+  5%{opacity:100%;}
+
+ 70% {
+    width: 576px;
+    height: 400px;
+    }
+    95% {opacity:100%;}
+   100% { width: 0px;
+      height: 400px;
+      opacity: 0%;
+    }
+}
+#artistLoose2{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-artist-loswin.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+#soldierWin{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-soldier-win.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 28s;
+  animation-fill-mode: forwards;
+}
+
+#soldierLoose1{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-soldier-coke.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+@keyframes docWin{
+  0% { width: 0px;
+    height: 400px;
+    opacity: 0%;
+  }
+  5%{opacity:100%;}
+
+ 70% {
+    width: 576px;
+    height: 400px;
+    }
+    95% {opacity:100%;}
+   100% { width: 0px;
+      height: 400px;
+      opacity: 0%;
+    }
+}
+#soldierLoose2{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-soldier-loose.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+#debuggerWin{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-debugger-win.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 28s;
+  animation-fill-mode: forwards;
+}
+
+#debuggerLoose1{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-soldier-coke.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+@keyframes docWin{
+  0% { width: 0px;
+    height: 400px;
+    opacity: 0%;
+  }
+  5%{opacity:100%;}
+
+ 70% {
+    width: 576px;
+    height: 400px;
+    }
+    95% {opacity:100%;}
+   100% { width: 0px;
+      height: 400px;
+      opacity: 0%;
+    }
+}
+#debuggerLoose2{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-debugger-loose.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
 .container {
   /* max-width: 60%; */
   margin: auto;
