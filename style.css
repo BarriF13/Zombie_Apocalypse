@@ -185,6 +185,7 @@ h3, #secondMsg, #charMsg {
   width: 600px;
   height: 320px;
   background-image: url(./img/attack-sneakBW.png) ;
+  position: relative;
   margin: 0 auto;
   padding: 10px 10px 10px 10px;
   background-size: cover;
@@ -211,8 +212,8 @@ background-image: url(./img/winner.png);
 animation: loose 5s;
 }
 @keyframes loose{
-  0%{opacity: 0%;}
-  100%{opacity: 100%;  transform: rotate(360deg);}
+  0%{ opacity: 0%;}
+  100%{opacity: 80%;  transform: rotate(360deg);}
 
 }
 #showLoser {
@@ -228,6 +229,116 @@ animation: loose 5s;
   0%{opacity: 0%;}
   100%{opacity: 100%;  transform: rotate(360deg);}
 
+}
+#doctorImgWin1{
+
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-dr-first.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+ 
+  animation-name: doctorWin;
+  animation-duration: 14s;
+  /* animation-direction: ; */
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite; */
+  /* animation-play-state: ; */
+
+}
+
+@keyframes doctorWin{
+  0% {
+    opacity:0%;
+    background-image: url(./img/story-dr-first.png);
+  }
+  50% {
+  opacity: 100%;
+  }
+
+ 75% {
+   opacity:100%; background-image: url(./img/story-dr-cut.png);
+   }
+   100% {
+    opacity:0%; background-image: url(./img/story-dr-cut.png);
+    }
+}
+#doctorImgWin2{
+
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-dr-win.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 16s;
+  animation-fill-mode: forwards;
+}
+@keyframes docWin{
+  0% {
+    opacity:0%;
+  }
+  50% {
+  opacity: 90%;
+  }
+  100% {
+    opacity: 100%;
+    }
+}
+#doctorImgLoose1{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-dr-counter.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+@keyframes docWin{
+  0% { width: 0px;
+    height: 400px;
+    opacity: 0%;
+  }
+  5%{opacity:100%;}
+
+ 70% {
+    width: 576px;
+    height: 400px;
+    }
+    95% {opacity:100%;}
+   100% { width: 0px;
+      height: 400px;
+      opacity: 0%;
+    }
+}
+#doctorImgLoose2{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-dr-loose.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
 }
 
 .container {

@@ -40,8 +40,14 @@ startButton.addEventListener('click', function () {
   document.getElementById('showLoser').style.display = 'none';
   document.getElementById('showPoints').style.display = 'none';
 
+  document.getElementById('doctorImgWin1').style.display='none';
+  document.getElementById('doctorImgWin2').style.display='none';
+  document.getElementById('doctorImgLoose1').style.display='none';
+  document.getElementById('doctorImgLoose2').style.display='none';
+ 
 
 });
+
 function hide() {
 
   document.getElementById('instruct').style.display = 'none';
@@ -212,6 +218,10 @@ function result() {
       
       document.getElementById('showLoser').style.display = 'block';
       document.getElementById('startA').style.display = 'block';
+      document.getElementById('doctorImgWin1').style.display= 'none';
+      document.getElementById('doctorImgWin2').style.display= 'none';
+      document.getElementById('doctorImgLoose1').style.display='none';
+      document.getElementById('doctorImgLoose2').style.display='none';
 
     } else if (outcome === "win") {
 
@@ -220,7 +230,11 @@ function result() {
       // document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
       document.getElementById('showPoints').style.display = 'block';
       document.getElementById('startA').style.display = 'block';
+      document.getElementById('doctorImgWin1').style.display= 'none';
+      document.getElementById('doctorImgWin2').style.display= 'none';
+      document.getElementById('doctorImgLoose1').style.display='none';
+      document.getElementById('doctorImgLoose2').style.display='none';
     }
-  }, 3000);
+  },28000);
 }
 
