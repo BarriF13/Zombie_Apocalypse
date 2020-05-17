@@ -530,6 +530,110 @@ animation: loose 5s;
   animation-duration: 15s;
   animation-fill-mode: forwards;
 }
+#unknownWin1{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-unknown-win.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+ 
+  animation-name: unknownWin;
+  animation-duration: 14s;
+  /* animation-direction: ; */
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: infinite; */
+  /* animation-play-state: ; */
+
+}
+
+@keyframes unknownWin{
+  0% { width: 0px;
+    height: 400px;
+    opacity: 0%;
+  }
+  5%{opacity:100%;}
+
+ 70% {
+    width: 576px;
+    height: 400px;
+    }
+  
+   100% { width: 576px;
+      height: 400px;
+      opacity: 100%;
+    }
+
+}
+#unknownWin2{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-unknown-win.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* animation-name: ; */
+  animation-duration: 16s;
+  animation-fill-mode: forwards;
+}
+/* might add animation here */
+
+#unknownLoose1{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-unknown-loose.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+@keyframes docWin{
+  0% { width: 0px;
+    height: 400px;
+    opacity: 0%;
+  }
+  5%{opacity:100%;}
+
+ 70% {
+    width: 576px;
+    height: 400px;
+    }
+    95% {opacity:100%;}
+   100% { width: 0px;
+      height: 400px;
+      opacity: 0%;
+    }
+}
+#unknownLoose2{
+
+  width: 576px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  background-image: url(./img/story-unknown-loose2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: docWin;
+  animation-duration: 15s;
+  animation-fill-mode: forwards;
+}
+
 .container {
   /* max-width: 60%; */
   margin: auto;

@@ -57,6 +57,11 @@ startButton.addEventListener('click', function () {
   document.getElementById('debuggerLoose1').style.display='none';
   document.getElementById('debuggerLoose2').style.display='none';
 
+  document.getElementById('unknownWin1').style.display='none';
+  document.getElementById('unknownWin2').style.display='none';
+  document.getElementById('unknownLoose1').style.display='none';
+  document.getElementById('unknownLoose2').style.display='none';
+
 });
 
 function hide() {
@@ -242,6 +247,10 @@ function result() {
       document.getElementById('debuggerWin').style.display='none';
       document.getElementById('debuggerLoose1').style.display='none';
       document.getElementById('debuggerLoose2').style.display='none';
+      document.getElementById('unknownWin1').style.display='none';
+      document.getElementById('unknownWin2').style.display='none';
+      document.getElementById('unknownLoose1').style.display='none';
+      document.getElementById('unknownLoose2').style.display='none';
 
     } else if (outcome === "win") {
 
@@ -264,6 +273,10 @@ function result() {
       document.getElementById('debuggerLoose1').style.display='none';
       document.getElementById('debuggerLoose2').style.display='none';
       
+      document.getElementById('unknownWin1').style.display='none';
+      document.getElementById('unknownWin2').style.display='none';
+      document.getElementById('unknownLoose1').style.display='none';
+      document.getElementById('unknownLoose2').style.display='none';
     }
   },28000);
 }
