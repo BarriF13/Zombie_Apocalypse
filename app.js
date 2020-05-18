@@ -1,76 +1,33 @@
-//  window.onload = function(){  alert('This is a text based game '); } 
 
-//--- start of the 
 
 var outcome;
 var playerName = {};
 var character = {};
 var choice = {};
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('userName').addEventListener('click', addName);
+  document.getElementById('userChoice').addEventListener('click', addChoice);
+  document.getElementById('userCharacter').addEventListener('click', addCharacter);
+});
+
 const startButton = document.getElementById("start");
-startButton.addEventListener('click', hide);
 startButton.addEventListener('click', function () {
   const openingMessage = document.getElementById('openingMSG');
   if (openingMessage.classList.contains('d-none')) {
     openingMessage.classList.remove('d-none');
     startButton.textContent = 'Back?';
-
   } else {
     openingMessage.classList.add('d-none');
     startButton.textContent = 'Too scared?!';
     setTimeout(function () {
       addEventListener('click', function () { location.reload(); })
     }, 10);
-
   }
-
-  document.getElementById('userName').style.display = 'none';
-  document.getElementById('name').style.display = 'none';
-
-  document.getElementById('userCharacter').style.display = 'none';
-  document.getElementById('character').style.display = 'none';
-
-  document.getElementById('userChoice').style.display = 'none';
-  document.getElementById('uChoice').style.display = 'none';
-  document.getElementById('startA').style.display = 'none';
-
-  document.getElementById('N1').style.display = 'none';
-  document.getElementById('Chars').style.display = 'none';
-  document.getElementById('move').style.display = 'none';
-  document.getElementById('showLoser').style.display = 'none';
-  document.getElementById('showPoints').style.display = 'none';
-
-  document.getElementById('doctorImgWin1').style.display='none';
-  document.getElementById('doctorImgWin2').style.display='none';
-  document.getElementById('doctorImgLoose1').style.display='none';
-  document.getElementById('doctorImgLoose2').style.display='none';
- 
-  document.getElementById('artistWin').style.display='none';
-  document.getElementById('artistLoose1').style.display='none';
-  document.getElementById('artistLoose2').style.display='none';
-
-  document.getElementById('soldierWin').style.display='none';
-  document.getElementById('soldierLoose1').style.display='none';
-  document.getElementById('soldierLoose2').style.display='none';
-
-  document.getElementById('debuggerWin').style.display='none';
-  document.getElementById('debuggerLoose1').style.display='none';
-  document.getElementById('debuggerLoose2').style.display='none';
-
-  document.getElementById('unknownWin1').style.display='none';
-  document.getElementById('unknownWin2').style.display='none';
-  document.getElementById('unknownLoose1').style.display='none';
-  document.getElementById('unknownLoose2').style.display='none';
-
-});
-
-function hide() {
-
-  document.getElementById('instruct').style.display = 'none';
-}
+  entryHiddenObjects();
+ });
 
 function startAgain() { location.reload(); }
-//--going to stage two of the game
 document.getElementById("gameStart").addEventListener('click', function () {
   var beginningScenario = [" You wake up in a dark. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
   function randNum(range) {
@@ -81,22 +38,16 @@ document.getElementById("gameStart").addEventListener('click', function () {
   }
   //I need to print this in a specific html add
   document.getElementById('secondMsg').textContent = (beginningScenario[randNum(beginningScenario.length - 1)]);
-  document.getElementById('Z1').style.display = 'none';
-  document.getElementById('intro').style.display = 'none';
-  document.getElementById('gameStart').style.display = 'none';
-
+  gameStartHide();
 })
 
 document.getElementById('gameStart').addEventListener('click', function () {
 
   setTimeout(function () {
-    document.getElementById('userName').style.display = 'block';
-    document.getElementById('name').style.display = 'block';
-    document.getElementById('N1').style.display = 'block';
-
+    gameStartShow();
   }, 1000);
 
-})
+});
 const addName = (ev) => {
   ev.preventDefault(); //to stop the form submitting 
   playerName = {
@@ -119,11 +70,7 @@ const addName = (ev) => {
   console.log(playerName.pName);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('userName').addEventListener('click', addName);
-  document.getElementById('userChoice').addEventListener('click', addChoice);
-  document.getElementById('userCharacter').addEventListener('click', addCharacter);
-});
+
 
 document.getElementById("name").addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
