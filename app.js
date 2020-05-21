@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('userCharacter').addEventListener('click', addCharacter);
 });
 
+
 const startButton = document.getElementById("start");
 startButton.addEventListener('click', function () {
   const openingMessage = document.getElementById('openingMSG');
@@ -29,7 +30,8 @@ startButton.addEventListener('click', function () {
 
 function startAgain() { location.reload(); }
 document.getElementById("gameStart").addEventListener('click', function () {
-  var beginningScenario = [" You wake up in a dark. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
+ var beginningScenario = [" You wake up in a dark. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
+
 
   function randNum(range) {
     "use strict";
@@ -61,6 +63,7 @@ const addName = (ev) => {
     "These times test the strengths of our character. <br> Choose from: soldier, doctor, artist or debugger";
   addNameToggle();
 }
+
 
 document.getElementById("name").addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
@@ -125,6 +128,7 @@ function game() {
   }
 }
 
+
 function powerUp() {
   if (character.charClass === "soldier") {
     character.strength = 5;
@@ -138,6 +142,7 @@ function powerUp() {
   if (character.charClass === "debugger") {
     character.stealth = 7;
     character.strength = 5;
+
   }
 }
 
