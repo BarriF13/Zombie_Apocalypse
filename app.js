@@ -1,5 +1,3 @@
-
-
 var outcome;
 var playerName = {};
 var character = {};
@@ -17,19 +15,22 @@ startButton.addEventListener('click', function () {
   if (openingMessage.classList.contains('d-none')) {
     openingMessage.classList.remove('d-none');
     startButton.textContent = 'Back?';
+
   } else {
     openingMessage.classList.add('d-none');
     startButton.textContent = 'Too scared?!';
     setTimeout(function () {
       addEventListener('click', function () { location.reload(); })
     }, 10);
+
   }
   entryHiddenObjects();
- });
+});
 
 function startAgain() { location.reload(); }
 document.getElementById("gameStart").addEventListener('click', function () {
   var beginningScenario = [" You wake up in a dark. It is quiet. You tiptoe to the door and peek out....who are you?", "You are standing in an open field west of a white house with a boarded front door. There is a small mailbox here....what is your name?", "Desperate times call for desperate measures. You see a small convenience store up ahead and decide to loot it for goods....what shall I call you?"];
+
   function randNum(range) {
     "use strict";
     if (typeof range === "number") {
@@ -46,8 +47,8 @@ document.getElementById('gameStart').addEventListener('click', function () {
   setTimeout(function () {
     gameStartShow();
   }, 1000);
+})
 
-});
 const addName = (ev) => {
   ev.preventDefault(); //to stop the form submitting 
   playerName = {
@@ -58,19 +59,8 @@ const addName = (ev) => {
   }
   document.getElementById('charMsg').innerHTML =
     "These times test the strengths of our character. <br> Choose from: soldier, doctor, artist or debugger";
-  document.getElementById('secondMsg').style.display = 'none';
-  document.getElementById('name').style.display = 'none';
-  document.getElementById('userName').style.display = 'none';
-  document.getElementById('N1').style.display = 'none';
-
-  document.getElementById('userCharacter').style.display = 'block';
-  document.getElementById('character').style.display = 'block';
-  document.getElementById('Chars').style.display = 'block';
-  
-  console.log(playerName.pName);
+  addNameToggle();
 }
-
-
 
 document.getElementById("name").addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
@@ -78,6 +68,7 @@ document.getElementById("name").addEventListener("keyup", function (event) {
     document.getElementById('userName').click();
   }
 })
+
 document.getElementById("character").addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
@@ -92,7 +83,7 @@ document.getElementById("uChoice").addEventListener("keyup", function (event) {
 })
 
 const addCharacter = (ev) => {
-  ev.preventDefault(); //to stop the form submitting 
+  ev.preventDefault();
   character = {
     health: 5,
     strength: 0,
@@ -103,44 +94,23 @@ const addCharacter = (ev) => {
   if (!character.charClass) {
     character.charClass = "doctor ";
   }
-  document.getElementById('userCharacter').style.display = 'none';
-  document.getElementById('character').style.display = 'none';
-  document.getElementById('Chars').style.display = 'none';
-
-  document.getElementById('userChoice').style.display = 'block';
-  document.getElementById('uChoice').style.display = 'block';
-  document.getElementById('move').style.display = 'block';
+  addCharacterToggle();
   document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + playerName.pName + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
-  console.log(character.charClass);
-  // powerUp();
 }
-
-
-
 const addChoice = (ev) => {
   ev.preventDefault();
   choice = {
     playerChoice: document.getElementById('uChoice').value.toLowerCase()
-
   }
   if (!choice.playerChoice) {
     choice.playerChoice = "attack";
   }
-  document.getElementById('userChoice').style.display = 'none';
-  document.getElementById('uChoice').style.display = 'none';
-  document.getElementById('move').style.display = 'none';
-  console.log(choice.playerChoice);
-  //run a function here --
+  addChoiceToggle();
   game();
   setTimeout(() => {
     result();
   }, 3000);
-
 }
-
-
-
-// --write the conditional for all the choices
 function game() {
   if (character.charClass === 'soldier') {
     soldierProfile()
@@ -169,62 +139,18 @@ function powerUp() {
     character.stealth = 7;
     character.strength = 5;
   }
-
 }
+
 function result() {
   setTimeout(function () {
     if (outcome === "lose") {
-
       document.getElementById('charMsg').textContent = "You lost!.....";
-
-      // document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
-      
-      document.getElementById('showLoser').style.display = 'block';
-      document.getElementById('startA').style.display = 'block';
-      document.getElementById('doctorImgWin1').style.display= 'none';
-      document.getElementById('doctorImgWin2').style.display= 'none';
-      document.getElementById('doctorImgLoose1').style.display='none';
-      document.getElementById('doctorImgLoose2').style.display='none';
-      document.getElementById('artistWin').style.display='none';
-      document.getElementById('artistLoose1').style.display='none';
-      document.getElementById('artistLoose2').style.display='none';
-      document.getElementById('soldierWin').style.display='none';
-      document.getElementById('soldierLoose1').style.display='none';
-      document.getElementById('soldierLoose2').style.display='none';
-      document.getElementById('debuggerWin').style.display='none';
-      document.getElementById('debuggerLoose1').style.display='none';
-      document.getElementById('debuggerLoose2').style.display='none';
-      document.getElementById('unknownWin1').style.display='none';
-      document.getElementById('unknownWin2').style.display='none';
-      document.getElementById('unknownLoose1').style.display='none';
-      document.getElementById('unknownLoose2').style.display='none';
-
+      looseToggle();
     } else if (outcome === "win") {
 
       document.getElementById('charMsg').textContent = "You win, HOORAY!!!";
-
-      // document.getElementById('showPoints').textContent = "your health : " + character.health + "- your strength : " + character.strength;
-      document.getElementById('showPoints').style.display = 'block';
-      document.getElementById('startA').style.display = 'block';
-      document.getElementById('doctorImgWin1').style.display= 'none';
-      document.getElementById('doctorImgWin2').style.display= 'none';
-      document.getElementById('doctorImgLoose1').style.display='none';
-      document.getElementById('doctorImgLoose2').style.display='none';
-      document.getElementById('artistWin').style.display='none';
-      document.getElementById('artistLoose1').style.display='none';
-      document.getElementById('artistLoose2').style.display='none';
-      document.getElementById('soldierWin').style.display='none';
-      document.getElementById('soldierLoose1').style.display='none';
-      document.getElementById('soldierLoose2').style.display='none';
-      document.getElementById('debuggerWin').style.display='none';
-      document.getElementById('debuggerLoose1').style.display='none';
-      document.getElementById('debuggerLoose2').style.display='none';
-      
-      document.getElementById('unknownWin1').style.display='none';
-      document.getElementById('unknownWin2').style.display='none';
-      document.getElementById('unknownLoose1').style.display='none';
-      document.getElementById('unknownLoose2').style.display='none';
+      winToggle();
     }
-  },28000);
+  }, 28000);
 }
 
