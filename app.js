@@ -15,7 +15,7 @@ startButton.addEventListener('click', function () {
   const openingMessage = document.getElementById('openingMSG');
   if (openingMessage.classList.contains('d-none')) {
     openingMessage.classList.remove('d-none');
-    startButton.textContent = 'Back?';
+    startButton.textContent = 'Reset?';
 
   } else {
     openingMessage.classList.add('d-none');

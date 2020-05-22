@@ -1,104 +1,58 @@
 function entryHiddenObjects() {
-  document.getElementById('userName').style.display = 'none';
-  document.getElementById('name').style.display = 'none';
-
-  document.getElementById('userCharacter').style.display = 'none';
-  document.getElementById('character').style.display = 'none';
-
-  document.getElementById('userChoice').style.display = 'none';
-  document.getElementById('uChoice').style.display = 'none';
-  document.getElementById('startA').style.display = 'none';
-
-  document.getElementById('N1').style.display = 'none';
-  document.getElementById('Chars').style.display = 'none';
-  document.getElementById('move').style.display = 'none';
-  document.getElementById('showLoser').style.display = 'none';
-  document.getElementById('showPoints').style.display = 'none';
-
-  document.getElementById('doctorImgWin1').style.display = 'none';
-  document.getElementById('doctorImgWin2').style.display = 'none';
-  document.getElementById('doctorImgLoose1').style.display = 'none';
-  document.getElementById('doctorImgLoose2').style.display = 'none';
-
-  document.getElementById('artistWin').style.display = 'none';
-  document.getElementById('artistLoose1').style.display = 'none';
-  document.getElementById('artistLoose2').style.display = 'none';
-
-  document.getElementById('soldierWin').style.display = 'none';
-  document.getElementById('soldierLoose1').style.display = 'none';
-  document.getElementById('soldierLoose2').style.display = 'none';
-
-  document.getElementById('debuggerWin').style.display = 'none';
-  document.getElementById('debuggerLoose1').style.display = 'none';
-  document.getElementById('debuggerLoose2').style.display = 'none';
-
-  document.getElementById('unknownWin1').style.display = 'none';
-  document.getElementById('unknownWin2').style.display = 'none';
-  document.getElementById('unknownLoose1').style.display = 'none';
-  document.getElementById('unknownLoose2').style.display = 'none';
-
-  document.getElementById('instruct').style.display = 'none';
+  let toMakeNone = ['userName',  'name',
+  'userCharacter',  'character',
+  'userChoice',  'uChoice',  'startA',
+  'N1',  'Chars',  'move',  'showLoser',  'showPoints',
+  'doctorImgWin1',  'doctorImgWin2',  'doctorImgLoose1',  'doctorImgLoose2',
+  'artistWin',  'artistLoose1',  'artistLoose2',
+  'soldierWin',  'soldierLoose1',  'soldierLoose2',
+  'debuggerWin',  'debuggerLoose1',  'debuggerLoose2',
+  'unknownWin1',  'unknownWin2',  'unknownLoose1',  'unknownLoose2', 'instruct'];
+  let toMakeBlock = [];
+  toggle(toMakeNone, toMakeBlock);
+  
 }
 
 function gameStartHide() {
-  document.getElementById('Z1').style.display = 'none';
-  document.getElementById('intro').style.display = 'none';
-  document.getElementById('gameStart').style.display = 'none';
+  let toMakeNone = ['Z1', 'intro', 'gameStart'];
+  let toMakeBlock = [];
+  toggle(toMakeNone, toMakeBlock);
+ 
 }
 
 function gameStartShow() {
-  document.getElementById('userName').style.display = 'block';
-  document.getElementById('name').style.display = 'block';
-  document.getElementById('N1').style.display = 'block';
+  let toMakeNone = [];
+  let toMakeBlock = [ 'userName', 'name', 'N1'];
+  toggle(toMakeNone, toMakeBlock);
+ 
 }
 
 function addNameToggle() {
-  document.getElementById('secondMsg').style.display = 'none';
-  document.getElementById('name').style.display = 'none';
-  document.getElementById('userName').style.display = 'none';
-  document.getElementById('N1').style.display = 'none';
+  let toMakeNone = ['secondMsg','name','userName','N1'];
+  let toMakeBlock = [ 'userCharacter', 'character', 'Chars'];
+  toggle(toMakeNone, toMakeBlock);
 
-  document.getElementById('userCharacter').style.display = 'block';
-  document.getElementById('character').style.display = 'block';
-  document.getElementById('Chars').style.display = 'block';
 }
 
 function addCharacterToggle() {
-  document.getElementById('userCharacter').style.display = 'none';
-  document.getElementById('character').style.display = 'none';
-  document.getElementById('Chars').style.display = 'none';
-
-  document.getElementById('userChoice').style.display = 'block';
-  document.getElementById('uChoice').style.display = 'block';
-  document.getElementById('move').style.display = 'block';
+  let toMakeNone = ['userCharacter',  'character',  'Chars'];
+  let toMakeBlock = ['userChoice', 'uChoice', 'move'];
+  toggle(toMakeNone, toMakeBlock);
+ 
 }
 
 function addChoiceToggle() {
-  document.getElementById('userChoice').style.display = 'none';
-  document.getElementById('uChoice').style.display = 'none';
-  document.getElementById('move').style.display = 'none';
-
+  let toMakeNone = ['userChoice',  'uChoice',  'move'];
+  let toMakeBlock = [];
+  toggle(toMakeNone, toMakeBlock);
+  
 }
 function looseToggle() {
-  document.getElementById('showLoser').style.display = 'block';
-  document.getElementById('startA').style.display = 'block';
-  document.getElementById('doctorImgWin1').style.display = 'none';
-  document.getElementById('doctorImgWin2').style.display = 'none';
-  document.getElementById('doctorImgLoose1').style.display = 'none';
-  document.getElementById('doctorImgLoose2').style.display = 'none';
-  document.getElementById('artistWin').style.display = 'none';
-  document.getElementById('artistLoose1').style.display = 'none';
-  document.getElementById('artistLoose2').style.display = 'none';
-  document.getElementById('soldierWin').style.display = 'none';
-  document.getElementById('soldierLoose1').style.display = 'none';
-  document.getElementById('soldierLoose2').style.display = 'none';
-  document.getElementById('debuggerWin').style.display = 'none';
-  document.getElementById('debuggerLoose1').style.display = 'none';
-  document.getElementById('debuggerLoose2').style.display = 'none';
-  document.getElementById('unknownWin1').style.display = 'none';
-  document.getElementById('unknownWin2').style.display = 'none';
-  document.getElementById('unknownLoose1').style.display = 'none';
-  document.getElementById('unknownLoose2').style.display = 'none';
+
+  let toMakeBlock = [  'showLoser',  'startA'];
+  let toMakeNone = [ 'doctorImgWin1',  'doctorImgWin2',  'doctorImgLoose1',  'doctorImgLoose2',  'artistWin',  'artistLoose1',  'artistLoose2',  'soldierWin',  'soldierLoose1',  'soldierLoose2',  'debuggerWin',  'debuggerLoose1',  'debuggerLoose2',  'unknownWin1',  'unknownWin2',  'unknownLoose1',  'unknownLoose2'];
+  toggle(toMakeNone, toMakeBlock);
+ 
 }
 
 function winToggle() {
@@ -107,6 +61,7 @@ function winToggle() {
   let toMakeNone = ['doctorImgWin1', 'doctorImgWin2', 'doctorImgWin1', 'doctorImgLoose1', 'doctorImgLoose2', 'artistWin', 'artistLoose1', 'artistLoose2', 'soldierWin', 'soldierLoose1', 'soldierLoose2', 'debuggerWin', 'debuggerLoose1', 'debuggerLoose2', 'unknownWin1', 'unknownWin2', 'unknownLoose1', 'unknownLoose2']
   toggle(toMakeNone, toMakeBlock);
 }
+
 function toggle(toHide, toShow) {
   for (let i = 0; i < toShow.length; i++) {
     document.getElementById(toShow[i]).style.display = 'block';

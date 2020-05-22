@@ -640,6 +640,9 @@ animation: loose 5s;
   padding-top: 0;
   padding: 0px 10px 10px;
 }
+.container input:focus ,button:focus  {
+  outline:0;
+}
 
 #headerTitle {
   height: 200px;
@@ -668,6 +671,11 @@ animation: loose 5s;
   transition-property: background, border-radius;
   transition-duration: 1s;
   animation: openning2 5s;
+}
+.but input:focus{
+  outline: 0;
+  border-color rgba(102, 24, 39, 0.993);
+
 }
 
 .butt:hover {
