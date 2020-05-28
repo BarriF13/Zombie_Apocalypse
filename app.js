@@ -65,6 +65,35 @@ const addName = (ev) => {
 }
 
 
+
+
+const addCharacter = (ev) => {
+  ev.preventDefault();
+  character = {
+       charClass: document.getElementById('character').value.toLowerCase()
+  }
+  //---make random character --how can I see the input is match to input
+  if (!character.charClass) {
+    character.charClass = "doctor ";
+  }
+  addCharacterToggle();
+  document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + playerName.pName + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
+}
+const addChoice = (ev) => {
+  ev.preventDefault();
+  choice = {
+    playerChoice: document.getElementById('uChoice').value.toLowerCase()
+  }
+  if (!choice.playerChoice ) {
+    choice.playerChoice = "attack";
+  }
+  addChoiceToggle();
+  game();
+  setTimeout(() => {
+    result();
+  }, 3000);
+}
+//---enter event
 document.getElementById("name").addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
@@ -84,36 +113,6 @@ document.getElementById("uChoice").addEventListener("keyup", function (event) {
     document.getElementById('userChoice').click();
   }
 })
-
-const addCharacter = (ev) => {
-  ev.preventDefault();
-  character = {
-    health: 5,
-    strength: 0,
-    stealth: 0,
-    charClass: document.getElementById('character').value.toLowerCase()
-  }
-  //---make random character --how can I see the input is match to input
-  if (!character.charClass) {
-    character.charClass = "doctor ";
-  }
-  addCharacterToggle();
-  document.getElementById('charMsg').textContent = "The brave adventurer and former " + character.charClass + ", " + playerName.pName + " enters a store for some loot. You notice a zombie slowly shuffling around amongst the destruction. What action shall you take? Attack, or attempt to sneak by the zombie?";
-}
-const addChoice = (ev) => {
-  ev.preventDefault();
-  choice = {
-    playerChoice: document.getElementById('uChoice').value.toLowerCase()
-  }
-  if (!choice.playerChoice) {
-    choice.playerChoice = "attack";
-  }
-  addChoiceToggle();
-  game();
-  setTimeout(() => {
-    result();
-  }, 3000);
-}
 function game() {
   if (character.charClass === 'soldier') {
     soldierProfile()
